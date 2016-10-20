@@ -1,0 +1,13 @@
+dist
+build
+*.egg-info
+.eggs
+cover
+htmlcov
+*.pyc
+.idea/
+
+test-report.html
+
+.coverage
+.cache/
