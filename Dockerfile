@@ -1,5 +1,5 @@
 FROM alpine:3.4
-RUN apk --update add --no-cache haproxy wget
+RUN apk --update add --no-cache haproxy curl ca-certificates
 ADD start.sh /bin/start.sh
 RUN chmod +x /bin/start.sh
 

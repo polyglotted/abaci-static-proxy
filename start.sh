@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Downloading configuration from " $RAW_URL
-wget --no-check-certificate $RAW_URL -O /etc/haproxy/haproxy.cfg
+curl -L $RAW_URL > /etc/haproxy/haproxy.cfg
 
 echo "Loading configuration"
 cat /etc/haproxy/haproxy.cfg
