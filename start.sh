@@ -6,4 +6,4 @@ curl -L $RAW_URL > /etc/haproxy/haproxy.cfg
 echo "Loading configuration"
 cat /etc/haproxy/haproxy.cfg
 
-haproxy -f /etc/haproxy/haproxy.cfg -sf $(pidof haproxy)
+haproxy -d -q -f /etc/haproxy/haproxy.cfg -sf $(pidof haproxy)
