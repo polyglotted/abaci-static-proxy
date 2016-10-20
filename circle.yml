@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   override:
-    - docker build -t polyglotted/abaci-static-proxy:${VERSION}
+    - docker build -t polyglotted/abaci-static-proxy:${VERSION} .
 
 test:
   override:
