@@ -1,7 +1,9 @@
 #!/bin/sh
 
-echo "Downloading configuration from " $RAW_URL
-curl -L $RAW_URL > /etc/haproxy/haproxy.cfg
+if [[ $LOCAL_VOL != "true" ]]; then
+    echo "Downloading configuration from " $RAW_URL
+    curl -L $RAW_URL > /etc/haproxy/haproxy.cfg
+fi
 
 echo "Loading configuration"
 cat /etc/haproxy/haproxy.cfg
